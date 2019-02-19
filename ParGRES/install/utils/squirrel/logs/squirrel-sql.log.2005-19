@@ -1,0 +1,524 @@
+0    [main] WARN  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - No logger configuration file passed on command line arguments. Using default log file: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel\.\logs\squirrel-sql.log
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:10:01 BRT 2005
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jre1.5.0_01
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: squirrel-sql.jar
+422  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.ProxyHandler  - Not using HTTP proxy
+422  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.AboutAction : image
+438  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.CloseAllSessionsAction : image
+438  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.CloseAllSQLResultTabsAction : image
+438  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.CloseAllSQLResultWindowsAction : image
+438  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.CloseSessionAction : image
+438  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.DisplayPluginSummaryAction : image
+438  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.DropSelectedTablesAction : image
+453  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.DumpApplicationAction : image
+453  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.DumpSessionAction : image
+516  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.ReconnectAction : image
+516  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.RefreshObjectTreeItemAction : image
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.SetDefaultCatalogAction : image
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.SetDefaultCatalogAction : rolloverimage
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.SetDefaultCatalogAction : disabledimage
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.session.action.ShowNativeSQLAction : image
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewFAQAction : image
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewHelpAction : image
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewLogsAction : image
+531  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewLogsAction : image
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for HSQLDB Server: org.hsqldb.jdbcDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for HSQLDB Web Server: org.hsqldb.jdbcDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for HSQLDB In-Memory: org.hsqldb.jdbcDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for HSQLDB Standalone: org.hsqldb.jdbcDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+828  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewAliasesAction : image
+828  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewDriversAction : image
+875  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewFAQAction : image
+875  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewChangeLogAction : image
+875  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewChangeLogAction : image
+875  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewLicenceAction : image
+875  [main] DEBUG net.sourceforge.squirrel_sql.fw.util.Resources  - No resource found for action.net.sourceforge.squirrel_sql.client.mainframe.action.ViewLicenceAction : image
+875  [main] DEBUG net.sourceforge.squirrel_sql.client.mainframe.MainFrame  - Adding net.sourceforge.squirrel_sql.client.mainframe.DriversToolWindow to Main Frame
+875  [main] DEBUG net.sourceforge.squirrel_sql.client.mainframe.MainFrame  - Adding net.sourceforge.squirrel_sql.client.mainframe.AliasesToolWindow to Main Frame
+2641 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.client.mainframe.MainFrame  - Removing net.sourceforge.squirrel_sql.client.mainframe.AliasesToolWindow from Main Frame
+2656 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.client.mainframe.MainFrame  - Removing net.sourceforge.squirrel_sql.client.mainframe.DriversToolWindow from Main Frame
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.client.preferences.SquirrelPreferences
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element mainFrameWindowState in bean type net.sourceforge.squirrel_sql.client.mainframe.MainFrameWindowState
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element aliasesWindowState in bean type net.sourceforge.squirrel_sql.fw.gui.WindowState
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element bounds in bean type net.sourceforge.squirrel_sql.fw.util.beanwrapper.RectangleWrapper
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element bounds in bean type net.sourceforge.squirrel_sql.fw.util.beanwrapper.RectangleWrapper
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element driversWindowState in bean type net.sourceforge.squirrel_sql.fw.gui.WindowState
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element bounds in bean type net.sourceforge.squirrel_sql.fw.util.beanwrapper.RectangleWrapper
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element proxyPerferences in bean type net.sourceforge.squirrel_sql.fw.util.ProxySettings
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element sessionProperties in bean type net.sourceforge.squirrel_sql.client.session.properties.SessionProperties
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element fontInfo in bean type null
+2672 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element largeResultSetObjectInfo in bean type net.sourceforge.squirrel_sql.fw.datasetviewer.LargeResultSetObjectInfo
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2703 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2719 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLDriver
+2734 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2766 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLAlias
+2766 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element driverIdentifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2766 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2766 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element null in bean type net.sourceforge.squirrel_sql.fw.sql.SQLAlias
+2766 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element driverIdentifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+2766 [AWT-EventQueue-0] DEBUG net.sourceforge.squirrel_sql.fw.xml.XMLBeanWriter  - Creating element identifier in bean type net.sourceforge.squirrel_sql.fw.id.UidIdentifier
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:10:53 BRT 2005
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\CVS;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:11:10 BRT 2005
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\CVS;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:11:21 BRT 2005
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\CVS;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:34:24 BRT 2005
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:35:01 BRT 2005
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:36:04 BRT 2005
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+656  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:37:51 BRT 2005
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 11:41:51 BRT 2005
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+672  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+688  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 14:20:04 BRT 2005
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 14:27:43 BRT 2005
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+703  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+719  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+719  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+719  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+719  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+719  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 14:29:49 BRT 2005
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+15   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+31   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Microsoft MSSQL Server JDBC Driver: com.microsoft.jdbc.sqlserver.SQLServerDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InstantDB: org.enhydra.instantdb.jdbc.idbDriver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mimer SQL: com.mimer.jdbc.Driver
+671  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle OCI Driver: oracle.jdbc.driver.OracleDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Embedded: com.pointbase.net.netJDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Anywhere: com.sybase.jdbc2.jdbc.SybDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for jTDS: com.internetcds.jdbc.tds.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for PostgreSQL: org.postgresql.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for ThinkSQL: uk.co.thinksql.ThinkSQLDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for SAPDB: com.sap.dbtech.jdbc.DriverSapDB
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Pointbase Server: com.pointbase.net.netJDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for MMMySQL Driver: org.gjt.mm.mysql.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sybase Adaptive Server Enterprise: com.sybase.jdbc2.jdbc.SybDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for IBM DB2 App Driver: COM.ibm.db2.jdbc.app.DB2Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Axion: org.axiondb.jdbc.AxionDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for InterClient: interbase.interclient.Driver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Oracle Thin Driver: oracle.jdbc.driver.OracleDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Mckoi: com.mckoi.JDBCDriver
+687  [main] WARN  net.sourceforge.squirrel_sql.client.db.DataCache  - Could not find JDBC driver class for Sunopsis XML: com.sunopsis.jdbc.driver.xml.SnpsXmlDriver
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - =======================================================
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - SQuirreL SQL Client Version 1.1final1 started: Fri May 06 16:27:01 BRT 2005
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - Copyright (c) 2001 - 2002 Colin Bell
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.vendor: Sun Microsystems Inc.
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.version: 1.5.0_01
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.runtime.name: Java(TM) 2 Runtime Environment, Standard Edition
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.name: Windows XP
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.version: 5.1
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - os.arch: x86
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.dir: C:\eclipse3.1M6\workspace\bmiranda_pargres\utils\squirrel
+0    [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - user.home: C:\Documents and Settings\bmiranda
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.home: C:\Arquivos de programas\Java\jdk1.5.0_01\jre
+16   [main] INFO  net.sourceforge.squirrel_sql.client.SquirrelLoggerFactory  - java.class.path: .\\squirrel-sql.jar;..\..\bin;.\\lib\fw.jar;.\\lib\hsqldb.jar;.\\lib\log4j.jar;.\\lib\nanoxml-2.1.jar;

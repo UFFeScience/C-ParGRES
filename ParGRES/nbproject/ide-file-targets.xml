@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir=".." name="pargres-IDE">
+    
+    <path id="classpath">
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+                <fileset dir="bin">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+      
+      <target name="compile-selected-files-in-src">
+        <fail unless="files">Must set property 'files'</fail>
+        <!-- TODO decide on and define some value for ${build.classes.dir} -->
+        <mkdir dir="${build.classes.dir}"/>
+        <javac destdir="${build.classes.dir}" includes="${files}" source="1.5" srcdir="src"/>
+    </target>
+    
+    <!-- TODO: edit the following target according to your needs -->
+    <!-- (more info: http://www.netbeans.org/kb/articles/freeform-config.html#runsingle) -->
+    <target name="run-selected-file-in-test">
+        <fail unless="run.class">Must set property 'run.class'</fail>
+        <java classname="${run.class}" failonerror="true" fork="true">
+            <classpath>
+                <pathelement path="lib/IzPack.zip:lib/commons-cli-1.0.jar:lib/hash.jar:lib/hsqldb.jar:lib/jsch-0.1.20.jar:lib/log4j-1.2.9.jar:lib/postgresql-8.0-310.jdbc3.jar:src:lib/junit_4/junit-4.10-javadoc.jar:lib/junit_4/junit-4.10-sources.jar:lib/junit_4/junit-4.10.jar"/>
+            </classpath>
+        </java>
+    </target>
+    
+    <target name="run-selected-file-in-src" depends="compile-selected-files-in-src" description="Run Single File">
+      <fail unless="runclass">Must set property 'classname'</fail>
+      <java classname="${runclass}">
+         <classpath refid="run.classpath"/>
+      </java>
+   </target>
+</project>

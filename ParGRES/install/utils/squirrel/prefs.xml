@@ -1,0 +1,77 @@
+<Beans>
+    <Bean Class="net.sourceforge.squirrel_sql.client.preferences.SquirrelPreferences">
+        <actionKeys Indexed="true"/>
+        <debugJdbc>false</debugJdbc>
+        <loginTimeout>30</loginTimeout>
+        <mainFrameWindowState Class="net.sourceforge.squirrel_sql.client.mainframe.MainFrameWindowState">
+            <aliasesWindowState Class="net.sourceforge.squirrel_sql.fw.gui.WindowState">
+                <bounds Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.RectangleWrapper">
+                    <height>250</height>
+                    <width>250</width>
+                    <x>400</x>
+                    <y>5</y>
+                </bounds>
+            </aliasesWindowState>
+            <bounds Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.RectangleWrapper">
+                <height>746</height>
+                <width>1024</width>
+                <x>0</x>
+                <y>0</y>
+            </bounds>
+            <driversWindowState Class="net.sourceforge.squirrel_sql.fw.gui.WindowState">
+                <bounds Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.RectangleWrapper">
+                    <height>250</height>
+                    <width>250</width>
+                    <x>5</x>
+                    <y>5</y>
+                </bounds>
+            </driversWindowState>
+        </mainFrameWindowState>
+        <proxyPerferences Class="net.sourceforge.squirrel_sql.fw.util.ProxySettings">
+            <httpNonProxyHosts/>
+            <httpProxyPassword/>
+            <httpProxyPort/>
+            <httpProxyServer/>
+            <httpProxyUser/>
+            <httpUseProxy>false</httpUseProxy>
+            <socksProxyPort/>
+            <socksProxyServer/>
+            <socksUseProxy>false</socksUseProxy>
+        </proxyPerferences>
+        <sessionProperties Class="net.sourceforge.squirrel_sql.client.session.properties.SessionProperties">
+            <autoCommit>true</autoCommit>
+            <commitOnClosingConnection>false</commitOnClosingConnection>
+            <contentsLimitRows>true</contentsLimitRows>
+            <contentsNbrOfRowsToShow>100</contentsNbrOfRowsToShow>
+            <fontInfo/>
+            <largeResultSetObjectInfo Class="net.sourceforge.squirrel_sql.fw.datasetviewer.LargeResultSetObjectInfo">
+                <readAllOther>false</readAllOther>
+                <readBinary>false</readBinary>
+                <readBlobs>false</readBlobs>
+                <readBlobsSize>255</readBlobsSize>
+                <readClobs>false</readClobs>
+                <readClobsSize>255</readClobsSize>
+                <readCompleteBlobs>false</readCompleteBlobs>
+                <readCompleteClobs>false</readCompleteClobs>
+                <readLongVarBinary>false</readLongVarBinary>
+                <readSQLOther>false</readSQLOther>
+                <readVarBinary>false</readVarBinary>
+            </largeResultSetObjectInfo>
+            <metaDataOutputClassName>net.sourceforge.squirrel_sql.fw.datasetviewer.DataSetViewerTablePanel</metaDataOutputClassName>
+            <showRowCount>false</showRowCount>
+            <showToolBar>true</showToolBar>
+            <sqlLimitRows>true</sqlLimitRows>
+            <sqlNbrOfRowsToShow>100</sqlNbrOfRowsToShow>
+            <sqlResultsOutputClassName>net.sourceforge.squirrel_sql.fw.datasetviewer.DataSetViewerTablePanel</sqlResultsOutputClassName>
+            <sqlStartOfLineComment>--</sqlStartOfLineComment>
+            <sqlStatementSeparator>;</sqlStatementSeparator>
+        </sessionProperties>
+        <showAliasesToolBar>true</showAliasesToolBar>
+        <showContentsWhenDragging>false</showContentsWhenDragging>
+        <showDriversToolBar>true</showDriversToolBar>
+        <showMainStatusBar>true</showMainStatusBar>
+        <showMainToolBar>true</showMainToolBar>
+        <showToolTips>true</showToolTips>
+        <useScrollableTabbedPanes>false</useScrollableTabbedPanes>
+    </Bean>
+</Beans>

@@ -1,0 +1,6 @@
+grant {
+	permission java.security.AllPermission;
+//	permission java.io.FilePermission "<<ALL FILES>>","read, write, execute";
+//	permission java.net.SocketPermission "*:1024-65535","connect,accept";
+//	permission java.util.PropertyPermission "user.home", "read";	
+};			

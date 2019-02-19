@@ -1,0 +1,8 @@
+--safsafsafdsaf
+
+select date '2005-12-12',2 + 2,sum(A.a1),AVG(a1)
+from T as V,A
+group by 2 +2,A1
+;
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE pargres [
+ <!ELEMENT pargres (users,cluster,metadata,sort*)>
+ <!ELEMENT users (user*)>
+ <!ELEMENT user EMPTY>
+ <!ATTLIST user name CDATA #REQUIRED>		
+ <!ATTLIST user password CDATA #REQUIRED>	
+ <!ELEMENT cluster (node*)> 
+ <!ELEMENT node EMPTY>
+ <!ATTLIST node host CDATA #REQUIRED>	
+ <!ATTLIST node port CDATA #REQUIRED>	 
+ <!ELEMENT metadata (vp*)> 
+ <!ELEMENT vp EMPTY> 
+ <!ATTLIST vp table CDATA #REQUIRED>	
+ <!ATTLIST vp field CDATA #REQUIRED>
+ <!ELEMENT sort (order*)> 
+ <!ELEMENT order EMPTY>
+ <!ATTLIST order table CDATA #REQUIRED>	
+ <!ATTLIST order field CDATA #REQUIRED>
+]>
+
+<pargres>
+	<users>
+		<user name="user" password=""/>
+	</users>
+	<cluster>
+		<node host="localhost" port="3001"/>
+		<node host="localhost" port="3002"/>
+	</cluster>
+	<metadata>
+		<vp table="lineitem" field="l_orderkey"/>
+		<vp table="orders" field="o_orderkey"/>		
+	</metadata>
+	<sort>
+		<order table="lineitem" field="l_quantity"/>
+	</sort>
+</pargres>

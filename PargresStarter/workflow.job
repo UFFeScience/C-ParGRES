@@ -1,0 +1,17 @@
+#PBS -l nodes=2:ppn=8
+#PBS -l walltime=24:00:00
+#PBS -S /bin/bash
+#PBS -N montage-1
+#PBS -j oe
+#PBS -V
+#PBS -m ae
+#PBS -M vitor.silva.sousa@gmail.com
+# change directory
+cd ${PBS_O_WORKDIR}
+# create list with names from data network
+sort ${PBS_NODEFILE} | uniq > /home/big/silva/vldb/montage/${PBS_JOBID}
+java -jar /home/users/silva/scc2-vldb/bin/mpjEnv.jar /home/big/silva/vldb/montage/${PBS_JOBID}
+cp /home/big/silva/vldb/montage/${PBS_JOBID}.conf /home/big/silva/vldb/montage/machines.conf
+cd /home/big/silva/vldb/montage
+rm ${PBS_JOBID}*
+/home/users/silva/scc2-vldb/bin/dispatcher.sh /home/big/silva/vldb/montage/machines.conf /home/users/silva/scc2-vldb/bin/SCCore.jar /home/big/silva/vldb/montage/SciCumulus-montage-uranus.xml

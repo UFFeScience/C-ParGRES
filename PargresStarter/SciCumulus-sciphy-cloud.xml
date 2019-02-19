@@ -1,0 +1,127 @@
+<SciCumulus>
+	<credentials access_key="AKIAJ7XMJKQWXBV5OGFQ" secret_access_key="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"/>
+	<environment verbose="false" type="CLOUD_AMAZON" cluster_name="vldb-sciphy"/>
+	<binary upload="false" directory="/root/programs" execution_version="SCCore.jar" starter_version="SCStarter.jar" conceptual_version="SCSetup.jar" query_version="SCQP.jar"/>
+	<machine image="ami-7e1a1716" user="root" password="livre2009#">
+		<vm type="t1.micro" financial_cost="1.2" disk_space="1680" ram="23" gflops="93.856" platform="64" cores="1" instances="2"/>
+		<vm type="m1.small" financial_cost="2.1" disk_space="3360" ram="60" gflops="93.856" platform="64" cores="2" instances="0"/>
+		<vm type="m1.large" financial_cost="2.4" disk_space="1680" ram="23" gflops="93.856" platform="64" cores="4" instances="0"/>
+	</machine>
+	<constraint workflow_exectag="sciphy-1" max_time="60" max_financial_cost="100" max_vm_amount="20" total_ram="24" total_disk="5" alfa1="0.5" alfa2="0.5" alfa3="0.0" cores="1" performance="true"/>
+	<workspace upload="true" bucket_name="vitor-starter" workflow_dir="/root/workflow_sciphy" compressed_workspace="temp_workflow_sciphy.zip" compressed_dir="temp_workflow_sciphy" />
+	<database name="scc-sciphy-vldb" username="postgres" password="livre2008!" port="5432" server="ec2-50-17-107-164.compute-1.amazonaws.com" path="/var/lib/pgsql"/>
+	<conceptualWorkflow tag="sciphy" description="Phylogeny using RAXML">
+		<activity tag="dataselection" type="MAP" template="%=WFDIR%/template_dataselection" activation="./experiment.cmd" description="preliminary data selection">
+			<relation reltype="Input" name="idataselection"/>
+			<relation reltype="Output" name="odataselection"/>
+			<field name="NAME" type="text" input="idataselection" output="odataselection"/>
+			<field name="FASTA_FILE" type="file" input="idataselection" output="odataselection" instrumented="false" operation="COPY"/>
+		</activity>
+		<activity tag="mafft" type="MAP" template="%=WFDIR%/template_mafft" activation="./experiment.cmd" description="align with mafft">
+			<relation reltype="Input" dependency="dataselection"/>
+			<relation reltype="Output" name="omafft"/>
+			<extractor name="dlmafft" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+            <field name="NAME" type="text" output="omafft"/>
+			<field name="FASTA_FILE" type="file" output="omafft" operation="COPY"/>
+			<field name="MAFFT_FILE" type="file" output="omafft" operation="COPY" extractor="dlmafft"/>
+			<field name="FASTA_NUMBERED" type="file" output="omafft" operation="COPY" extractor="dlmafft"/>
+        </activity>
+        <activity tag="readseq" type="MAP" template="%=WFDIR%/template_readseq" activation="./experiment.cmd" description="change format withreadseq">
+            <relation reltype="Input" dependency="mafft"/>
+           	<relation reltype="Output" name="oreadseq"/>
+			<extractor name="dlreadseq" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+            <field name="NAME" type="text" output="oreadseq"/>
+			<field name="FASTA_FILE" type="file" output="oreadseq" operation="COPY"/>
+			<field name="MAFFT_FILE" type="file" operation="COPY"/>
+			<field name="FASTA_NUMBERED" type="file" output="oreadseq" operation="COPY"/>
+			<field name="PHYLIP" type="file" output="oreadseq" operation="COPY" extractor="dlreadseq"/>
+			<field name="NUM_ALIGNS" type="float" output="oreadseq" decimalplaces="1" extractor="dlreadseq"/>
+			<field name="LENGTH" type="float" output="oreadseq" decimalplaces="1" extractor="dlreadseq"/>
+        </activity>
+        <activity tag="modelgenerator" type="MAP" template="%=WFDIR%/template_modelgenerator" activation="./experiment.cmd" description="elect model with modelgenerator">
+            <relation reltype="Input" dependency="readseq"/>
+            <relation reltype="Output" name="omodelgenerator"/>
+			<extractor name="dlmodelgenerator" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+            <field name="NAME" type="text" output="omodelgenerator"/>
+			<field name="FASTA_FILE" type="file" output="omodelgenerator" operation="COPY"/>
+			<field name="FASTA_NUMBERED" type="file" output="omodelgenerator" operation="COPY"/>
+			<field name="PHYLIP" type="file" output="omodelgenerator" operation="COPY"/>
+			<field name="NUM_ALIGNS" type="float" output="omodelgenerator" decimalplaces="1"/>
+			<field name="LENGTH" type="float" output="omodelgenerator" decimalplaces="1"/>
+			<field name="MG" type="file" output="omodelgenerator" operation="COPY" extractor="dlmodelgenerator"/>
+			<field name="MODEL1" type="text" output="omodelgenerator" extractor="dlmodelgenerator"/>
+			<field name="PROB1" type="float" output="omodelgenerator" decimalplaces="6" extractor="dlmodelgenerator"/>
+			<field name="MODEL2" type="text" output="omodelgenerator" extractor="dlmodelgenerator"/>
+			<field name="PROB2" type="float" output="omodelgenerator" decimalplaces="6" extractor="dlmodelgenerator"/>
+        </activity>
+        <activity tag="raxml1" type="MAP" template="%=WFDIR%/template_raxml_1" activation="./experiment.cmd" description="construct trees with raxml">
+        	<relation reltype="Input" dependency="modelgenerator"/>
+           	<relation reltype="Output" name="oraxml1"/>
+			<extractor name="dlraxml1" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+            <field name="NAME" type="text" output="oraxml1"/>
+			<field name="FASTA_FILE" type="file" output="oraxml1"/>
+			<field name="FASTA_NUMBERED" type="file" output="oraxml1" operation="COPY"/>
+			<field name="PHYLIP" type="file" operation="COPY" output="oraxml1"/>
+			<field name="NUM_ALIGNS" type="float" output="oraxml1" decimalplaces="1"/>
+			<field name="LENGTH" type="float" output="oraxml1" decimalplaces="1"/>
+			<field name="MG" type="file" output="oraxml1" operation="COPY"/>
+			<field name="BESTTREE" type="file" operation="COPY" output="oraxml1" extractor="dlraxml1"/>
+			<field name="INFO" type="file" operation="COPY" output="oraxml1" extractor="dlraxml1"/>
+			<field name="LOG" type="file" operation="COPY" output="oraxml1" extractor="dlraxml1"/>
+			<field name="PARSIMONYTREE" type="file" operation="COPY" output="oraxml1" extractor="dlraxml1"/>
+			<field name="RESULT" type="file" operation="COPY" output="oraxml1" extractor="dlraxml1"/>
+			<field name="BESTSCORE" type="float" decimalplaces="6" output="oraxml1" extractor="dlraxml1"/>
+        </activity>
+        <activity tag="raxml2" type="MAP" template="%=WFDIR%/template_raxml_2" activation="./experiment.cmd" description="construct trees with raxml">
+        	<relation reltype="Input" dependency="modelgenerator"/>
+           	<relation reltype="Output" name="oraxml2"/>
+			<extractor name="dlraxml2" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+            <field name="NAME" type="text" output="oraxml2"/>
+			<field name="FASTA_FILE" type="file" output="oraxml2"/>
+			<field name="BOOTSTRAP" type="file" operation="COPY" output="oraxml2" extractor="dlraxml2"/>
+			<field name="INFO" type="file" operation="COPY" output="oraxml2" extractor="dlraxml2"/>
+        </activity>
+        <activity tag="mergeRaxml" description="" type="MR_QUERY" activation="
+        	SELECT I.EWKFID, I.dlraxml1id, I.dlmodelgeneratorid, I.dlreadseqid, I.dlmafftid, Y.dlraxml2id, I.NAME, I.FASTA_FILE
+			FROM sciphy.oraxml1 as I, sciphy.oraxml2 as Y, sciphy.dlraxml1 as R, sciphy.dlraxml2 as S
+			WHERE I.NAME = Y.NAME AND I.ewkfid=%=EWKFID% AND Y.ewkfid=I.ewkfid 
+			AND R.ewkfid = I.ewkfid AND S.ewkfid = I.ewkfid
+			AND R.rid = I.dlraxml1id AND S.rid = Y.dlraxml2id">
+			<relation reltype="Input" dependency="raxml1"/>
+			<relation reltype="Input" dependency="raxml2"/>
+			<relation reltype="Output" name="omergeraxml" />
+			<field name="NAME" type="text" input="oraxml1" output="omergeraxml"/>
+			<field name="FASTA_FILE" type="file" input="oraxml1" output="omergeraxml"/>
+			<field name="FASTA_NUMBERED" type="file" input="oraxml1" output="omergeraxml" operation="COPY"/>
+			<field name="PHYLIP" type="file" input="oraxml1" output="omergeraxml"/>
+			<field name="NUM_ALIGNS" type="float" output="omergeraxml" decimalplaces="1"/>
+			<field name="LENGTH" type="float" output="omergeraxml" decimalplaces="1"/>
+			<field name="BESTTREE" type="file" input="oraxml1" output="omergeraxml"/>
+			<field name="BESTSCORE" type="float" decimalplaces="6" input="oraxml1" output="omergeraxml"/>
+			<field name="MG" type="file" input="oraxml1" output="omergeraxml" operation="COPY"/>
+			<field name="NAME" type="text" input="oraxml2"/>
+			<field name="FASTA_FILE" type="file" input="oraxml2"/>
+			<field name="PHYLIP" type="file" input="oraxml2"/>
+			<field name="BOOTSTRAP" type="file" input="oraxml2" output="omergeraxml"/>
+    	</activity>
+    	<activity tag="raxml3" type="MAP" template="%=WFDIR%/template_raxml_3" activation="./experiment.cmd" description="construct trees with raxml">
+        	<relation reltype="Input" dependency="mergeRaxml"/>
+           	<relation reltype="Output" name="oraxml3"/>
+			<extractor name="dlraxml3" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+            <field name="NAME" type="text" output="oraxml3"/>
+			<field name="FASTA_FILE" type="file" output="oraxml3"/>
+			<field name="FASTA_NUMBERED" type="file" output="oraxml3" operation="COPY"/>
+			<field name="PHYLIP" type="file" output="oraxml3"/>
+			<field name="NUM_ALIGNS" type="float" output="oraxml3" decimalplaces="1"/>
+			<field name="LENGTH" type="float" output="oraxml3" decimalplaces="1"/>
+			<field name="BESTTREE" type="file" operation="COPY" output="oraxml3"/>
+			<field name="BESTSCORE" type="float" decimalplaces="6" output="oraxml3"/>
+			<field name="BOOTSTRAP" type="file" operation="COPY" output="oraxml3"/>
+			<field name="MINBOOTSTRAP" type="float" decimalplaces="6" output="oraxml3" extractor="dlraxml3"/>
+			<field name="PHYTREE" type="text" decimalplaces="6" output="oraxml3" extractor="dlraxml3"/>
+        </activity>
+	</conceptualWorkflow>
+	<executionWorkflow execmodel="DYN_FAF" tag="sciphy" expdir="%=WFDIR%/exp" adaptive="false" max_failure="5" user_interaction="false" redundancy="false" reliability="0.9">
+		<relation name="idataselection" filename="idataselection.dataset"/>
+	</executionWorkflow>
+</SciCumulus>

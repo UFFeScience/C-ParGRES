@@ -1,0 +1,41 @@
+<!DOCTYPE pargres [
+ <!ELEMENT pargres (users,cluster,metadata,sort)>
+ <!ELEMENT users (user*)>
+ <!ELEMENT user EMPTY>
+ <!ATTLIST user name CDATA #REQUIRED>
+ <!ATTLIST user password CDATA #REQUIRED>
+ <!ELEMENT cluster (node*)>
+ <!ELEMENT node EMPTY>
+ <!ATTLIST node host CDATA #REQUIRED>
+ <!ATTLIST node port CDATA #REQUIRED>
+ <!ELEMENT metadata (vp*)>
+ <!ELEMENT vp EMPTY>
+ <!ATTLIST vp table CDATA #REQUIRED>
+ <!ATTLIST vp field CDATA #REQUIRED>
+]>
+
+<pargres>
+        <users>
+                <user name="tpch" password=""/>
+        </users>
+        <cluster>
+                <node host="parasol18" port="3001"/>
+                <node host="parasol19" port="3001"/>
+                <node host="parasol20" port="3001"/>
+                <node host="parasol21" port="3001"/>
+                <node host="parasol22" port="3001"/>
+                <node host="parasol23" port="3001"/>
+                <node host="parasol24" port="3001"/>
+                <node host="parasol25" port="3001"/>
+                <node host="parasol26" port="3001"/>
+                <node host="parasol27" port="3001"/>
+                <node host="parasol28" port="3001"/>
+                <node host="parasol29" port="3001"/>
+                <node host="parasol31" port="3001"/>
+                <node host="parasol32" port="3001"/>
+        </cluster>
+        <metadata>
+                <vp table="lineitem" field="l_orderkey"/>
+                <vp table="orders" field="o_orderkey"/>
+        </metadata>
+</pargres>

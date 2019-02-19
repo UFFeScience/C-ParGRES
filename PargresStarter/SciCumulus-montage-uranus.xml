@@ -1,0 +1,170 @@
+<SciCumulus>
+	<environment verbose="false" type="CLUSTER" host="uranus.nacad.ufrj.br"/>
+	<binary upload="false" directory="/home/users/silva/scc2-vldb/bin" conceptual_version="SCSetup.jar" execution_version="SCCore.jar" query_version="SCQP.jar"/>
+	<constraint workflow_exectag="montage-1" nodes="2" cores="8" walltime="24" job_name="vldb" mail="vitor.silva.sousa@gmail.com"/>
+	<machine user="silva" password="livre2014!"/>
+	<workspace upload="true" workflow_dir="/home/big/silva/vldb/montage" compressed_workspace="temp_workflow_montage.zip" compressed_dir="temp_workflow_montage" />
+	<database name="scc2-vldb" username="postgres" password="livre2009#" port="5432" server="146.164.31.200" server_port="52831" path="/var/lib/pgsql"/>
+	<query sql="select ea.taskid, ea.actid, ea.machineid, ea.status from eactivation as ea;"/>
+	<conceptualWorkflow tag="montage" description="">
+		<activity tag="ListFits" description="" type="SPLIT_MAP" activation="./experiment.cmd" template="%=WFDIR%/template_listfits">
+			<relation reltype="Input" name="IListFits"/>
+			<relation reltype="Output" name="OListFits"/>
+			<extractor name="dllistfits" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" input="IListFits" output="OListFits" decimalplaces="0"/>
+			<field name="REGION" type="text" input="IListFits"/>
+			<field name="DEGREES" type="float" input="IListFits" decimalplaces="2"/>
+			<field name="HEADER" type="file" input="IListFits" output="OListFits" operation="COPY"/>
+			<field name="CNTR" type="float" output="OListFits" decimalplaces="0" extractor="dllistfits"/>
+			<field name="RA" type="float" output="OListFits" decimalplaces="7" extractor="dllistfits"/>
+			<field name="DEC" type="float" output="OListFits" decimalplaces="7" extractor="dllistfits"/>
+			<field name="CRA" type="text" output="OListFits" extractor="dllistfits"/>
+			<field name="CDEC" type="text" output="OListFits" extractor="dllistfits"/>
+			<field name="NAXIS1" type="float" output="OListFits" decimalplaces="0" extractor="dllistfits"/>
+			<field name="NAXIS2" type="float" output="OListFits" decimalplaces="0" extractor="dllistfits"/>
+			<field name="CTYPE1" type="text" output="OListFits" extractor="dllistfits"/>
+			<field name="CTYPE2" type="text" output="OListFits" extractor="dllistfits"/>
+			<field name="CRPIX1" type="float" output="OListFits" decimalplaces="5" extractor="dllistfits"/>
+			<field name="CRPIX2" type="float" output="OListFits" decimalplaces="5" extractor="dllistfits"/>
+			<field name="CRVAL1" type="float" output="OListFits" decimalplaces="7" extractor="dllistfits"/>
+			<field name="CRVAL2" type="float" output="OListFits" decimalplaces="7" extractor="dllistfits"/>
+			<field name="CDELT1" type="text" output="OListFits" extractor="dllistfits"/>
+			<field name="CDELT2" type="text" output="OListFits" extractor="dllistfits"/>
+			<field name="CROTA2" type="float" output="OListFits" decimalplaces="7" extractor="dllistfits"/>
+			<field name="EQUINOX" type="float" output="OListFits" decimalplaces="2" extractor="dllistfits"/>
+			<field name="SIZE" type="float" output="OListFits" decimalplaces="0" extractor="dllistfits"/>
+			<field name="HDU" type="float" output="OListFits" decimalplaces="0" extractor="dllistfits"/>
+			<field name="FNAME" type="file" output="OListFits" extractor="dllistfits"/>
+    	</activity>
+    	<activity tag="Projection" description="" type="FILTER" activation="./experiment.cmd" template="%=WFDIR%/template_projection">
+    		<relation reltype="Input" dependency="ListFits"/>
+			<relation reltype="Output" name="OProjection" />
+			<extractor name="dlprojection" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OProjection" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OProjection" operation="COPY"/>
+			<field name="CNTR" type="float" output="OProjection" decimalplaces="0"/>
+			<field name="RA" type="float" output="OProjection" decimalplaces="7"/>
+			<field name="DEC" type="float" output="OProjection" decimalplaces="7"/>
+			<field name="CRA" type="text" output="OProjection"/>
+			<field name="CDEC" type="text" output="OProjection"/>
+			<field name="NAXIS1" type="float" output="OProjection" decimalplaces="0"/>
+			<field name="NAXIS2" type="float" output="OProjection" decimalplaces="0"/>
+			<field name="CTYPE1" type="text" output="OProjection"/>
+			<field name="CTYPE2" type="text" output="OProjection"/>
+			<field name="CRPIX1" type="float" output="OProjection" decimalplaces="5"/>
+			<field name="CRPIX2" type="float" output="OProjection" decimalplaces="5"/>
+			<field name="CRVAL1" type="float" output="OProjection" decimalplaces="7"/>
+			<field name="CRVAL2" type="float" output="OProjection" decimalplaces="7"/>
+			<field name="CDELT1" type="text" output="OProjection"/>
+			<field name="CDELT2" type="text" output="OProjection"/>
+			<field name="CROTA2" type="float" output="OProjection" decimalplaces="7"/>
+			<field name="EQUINOX" type="float" output="OProjection" decimalplaces="2"/>
+			<field name="SIZE" type="float" output="OProjection" decimalplaces="0"/>
+			<field name="HDU" type="float" output="OProjection" decimalplaces="0"/>
+			<field name="HDU_AREA" type="file" output="OProjection" operation="COPY" extractor="dlprojection"/>
+			<field name="HDU_FILE" type="file" output="OProjection" operation="COPY" extractor="dlprojection"/>
+    	</activity>
+		<activity tag="SelectProjections" description="" type="REDUCE" operand="MOSAIC_ID" activation="./experiment.cmd" template="%=WFDIR%/template_selectprojections">
+			<relation reltype="Input" dependency="Projection"/>
+			<relation reltype="Output" name="OSelectProjections"/>
+			<extractor name="dlselectprojections" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OSelectProjections" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OSelectProjections" operation="COPY"/>
+			<field name="MOSAIC_FITS" type="file" output="OSelectProjections" operation="COPY" extractor="dlselectprojections"/>
+			<field name="MOSAIC_AREA" type="file" output="OSelectProjections" operation="COPY" extractor="dlselectprojections"/>
+        </activity>
+        <activity tag="CreateUncorrectedMosaic" description="" type="MAP" activation="./experiment.cmd" template="%=WFDIR%/template_createuncorrectedmosaic">
+			<relation reltype="Input" dependency="SelectProjections"/>
+			<relation reltype="Output" name="OCreateUMosaic"/>
+			<extractor name="dlcreateumosaic" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OCreateUMosaic" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OCreateUMosaic" operation="COPY"/>
+			<field name="MOSAIC_JPG" type="file" output="OCreateUMosaic" extractor="dlcreateumosaic"/>
+        </activity>
+        <activity tag="CalculateOverlaps" description="" type="REDUCE" operand="MOSAIC_ID" activation="./experiment.cmd" template="%=WFDIR%/template_calculateoverlaps">
+			<relation reltype="Input" dependency="Projection"/>
+			<relation reltype="Output" name="OCalculateOverlaps"/>
+			<extractor name="dlcalculateoverlaps" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OCalculateOverlaps" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OCalculateOverlaps" operation="COPY"/>
+			<field name="DIFFS_TBL" type="file" output="OCalculateOverlaps" operation="COPY" extractor="dlcalculateoverlaps"/>
+			<field name="DIFFS_PATH" type="text" output="OCalculateOverlaps" extractor="dlcalculateoverlaps"/>
+        </activity>
+        <activity tag="ExtractDifferences" description="" type="SPLIT_MAP" activation="./experiment.cmd" template="%=WFDIR%/template_extractdifferences">
+			<relation reltype="Input" dependency="CalculateOverlaps"/>
+			<relation reltype="Output" name="OExtractDifferences"/>
+			<extractor name="dlextractdifferences" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OExtractDifferences" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OExtractDifferences" operation="COPY"/>
+			<field name="CNTR1" type="float" output="OExtractDifferences" decimalplaces="0" extractor="dlextractdifferences"/>
+			<field name="CNTR2" type="float" output="OExtractDifferences" decimalplaces="0" extractor="dlextractdifferences"/>
+			<field name="PLUS" type="file" output="OExtractDifferences" operation="COPY" extractor="dlextractdifferences"/>
+			<field name="PLUS_AREA" type="file" output="OExtractDifferences" operation="COPY" extractor="dlextractdifferences"/>
+			<field name="MINUS" type="file" output="OExtractDifferences" operation="COPY" extractor="dlextractdifferences"/>
+			<field name="MINUS_AREA" type="file" output="OExtractDifferences" operation="COPY" extractor="dlextractdifferences"/>
+			<field name="DIFF" type="text" output="OExtractDifferences" extractor="dlextractdifferences"/>
+        </activity>
+        <activity tag="CalculateDifference" description="" type="MAP" activation="./experiment.cmd" template="%=WFDIR%/template_calculatedifference">
+			<relation reltype="Input" dependency="ExtractDifferences"/>
+			<relation reltype="Output" name="OCalculateDifference"/>
+			<extractor name="dlcalculatedifference" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OCalculateDifference" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OCalculateDifference" operation="COPY"/>
+			<field name="CNTR1" type="float" output="OCalculateDifference" decimalplaces="0"/>
+			<field name="CNTR2" type="float" output="OCalculateDifference" decimalplaces="0"/>
+			<field name="PLUS" type="file" output="OCalculateDifference" operation="COPY"/>
+			<field name="PLUS_AREA" type="file" output="OCalculateDifference" operation="COPY"/>
+			<field name="MINUS" type="file" output="OCalculateDifference" operation="COPY"/>
+			<field name="MINUS_AREA" type="file" output="OCalculateDifference" operation="COPY"/>
+			<field name="DIFF_FITS" type="file" output="OCalculateDifference" operation="COPY" extractor="dlcalculatedifference"/>
+			<field name="DIFF_AREA" type="file" output="OCalculateDifference" operation="COPY" extractor="dlcalculatedifference"/>
+        </activity>
+        <activity tag="FitPlane" description="" type="FILTER" activation="./experiment.cmd" template="%=WFDIR%/template_fitplane">
+			<relation reltype="Input" dependency="CalculateDifference"/>
+			<relation reltype="Output" name="OFitPlane"/>
+			<extractor name="dlfitplane" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OFitPlane" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OFitPlane" operation="COPY"/>
+			<field name="CNTR1" type="float" output="OFitPlane" decimalplaces="0"/>
+			<field name="CNTR2" type="float" output="OFitPlane" decimalplaces="0"/>
+			<field name="PLUS" type="file" output="OFitPlane" operation="COPY"/>
+			<field name="PLUS_AREA" type="file" output="OFitPlane" operation="COPY"/>
+			<field name="MINUS" type="file" output="OFitPlane" operation="COPY"/>
+			<field name="MINUS_AREA" type="file" output="OFitPlane" operation="COPY"/>
+			<field name="DIFF_FITS" type="file" operation="COPY"/>
+			<field name="DIFF_AREA" type="file" operation="COPY"/>
+			<field name="FA" type="text" output="OFitPlane" extractor="dlfitplane"/>
+			<field name="FB" type="text" output="OFitPlane" extractor="dlfitplane"/>
+			<field name="FC" type="text" output="OFitPlane" extractor="dlfitplane"/>
+			<field name="FCRPIX1" type="float" output="OFitPlane" decimalplaces="2" extractor="dlfitplane"/>
+			<field name="FCRPIX2" type="float" output="OFitPlane" decimalplaces="2" extractor="dlfitplane"/>
+			<field name="FXMIN" type="float" output="OFitPlane" decimalplaces="0" extractor="dlfitplane"/>
+			<field name="FXMAX" type="float" output="OFitPlane" decimalplaces="0" extractor="dlfitplane"/>
+			<field name="FYMIN" type="float" output="OFitPlane" decimalplaces="0" extractor="dlfitplane"/>
+			<field name="FYMAX" type="float" output="OFitPlane" decimalplaces="0" extractor="dlfitplane"/>
+			<field name="FXCENTER" type="float" output="OFitPlane" decimalplaces="2" extractor="dlfitplane"/>
+			<field name="FYCENTER" type="float" output="OFitPlane" decimalplaces="2" extractor="dlfitplane"/>
+			<field name="FNPIXEL" type="float" output="OFitPlane" decimalplaces="0" extractor="dlfitplane"/>
+			<field name="FRMS" type="float" output="OFitPlane" decimalplaces="5" extractor="dlfitplane"/>
+			<field name="FBOXX" type="float" output="OFitPlane" decimalplaces="1" extractor="dlfitplane"/>
+			<field name="FBOXY" type="float" output="OFitPlane" decimalplaces="1" extractor="dlfitplane"/>
+			<field name="FBOXWIDTH" type="float" output="OFitPlane" decimalplaces="1" extractor="dlfitplane"/>
+			<field name="FBOXHEIGHT" type="float" output="OFitPlane" decimalplaces="1" extractor="dlfitplane"/>
+			<field name="FBOXANG" type="float" output="OFitPlane" decimalplaces="1" extractor="dlfitplane"/>
+        </activity>
+        <activity tag="CreateMosaic" description="" type="REDUCE" operand="MOSAIC_ID" activation="./experiment.cmd" template="%=WFDIR%/template_createmosaic">
+			<relation reltype="Input" dependency="FitPlane"/>
+			<relation reltype="Output" name="OCreateMosaic"/>
+			<extractor name="dlcreatemosaic" type="LOADING" cartridge="EXTERNAL_PROGRAM" invocation="./extractor.cmd"/>
+			<field name="MOSAIC_ID" type="float" output="OCreateMosaic" decimalplaces="0"/>
+			<field name="HEADER" type="file" output="OCreateMosaic" operation="COPY"/>
+			<field name="IMAGES_TBL" type="file" output="OCreateMosaic" extractor="dlcreatemosaic"/>
+			<field name="MOSAIC_FITS" type="file" output="OCreateMosaic" extractor="dlcreatemosaic"/>
+			<field name="MOSAIC_AREA" type="file" output="OCreateMosaic" extractor="dlcreatemosaic"/>
+			<field name="MOSAIC_JPG" type="file" output="OCreateMosaic" extractor="dlcreatemosaic"/>
+        </activity>
+	</conceptualWorkflow>
+	<executionWorkflow tag="montage" execmodel="DYN_FAF" expdir="%=WFDIR%/exp" adaptive="false" max_failure="5" user_interaction="false" redundancy="false" reliability="0.9">
+		<relation name="IListFits" filename="input.dataset"/>
+	</executionWorkflow>
+</SciCumulus>

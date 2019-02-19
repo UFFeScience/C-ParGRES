@@ -1,0 +1,35 @@
+<Beans>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLAlias">
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-18</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-706b3522:103b21f553a:-7fe6</string>
+        </identifier>
+        <name>hsqldb2</name>
+        <url>jdbc:hsqldb:hsql://localhost:9002</url>
+        <userName>sa</userName>
+    </Bean>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLAlias">
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-18</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-706b3522:103b21f553a:-7fe8</string>
+        </identifier>
+        <name>hsqldb1</name>
+        <url>jdbc:hsqldb:hsql://localhost:9001</url>
+        <userName>sa</userName>
+    </Bean>
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLAlias">
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-2b71783c:103b26f417f:-7fe2</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>-2b71783c:103b26f417f:-7fe1</string>
+        </identifier>
+        <name>Pargres</name>
+        <url>jdbc:pargres://localhost</url>
+        <userName>user</userName>
+    </Bean>
+</Beans>

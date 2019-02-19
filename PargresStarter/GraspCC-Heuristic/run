@@ -1,0 +1,1 @@
+./Release/GraspCC inst/instance_f22-sbb.txt 0.5 0.5 > saida/saida_f22-sbb.txt

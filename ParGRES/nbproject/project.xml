@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.ant.freeform</type>
+    <configuration>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
+            <!-- Não usar personalizador das Propriedades do Projeto ao editar este arquivo manualmente. 
+ Para impedir que o personalizador seja exibido, crie o arquivo nbproject/project.properties e digite a propriedade
+auxiliary.show.customizer=false 
+lá. Adicionar 
+auxiliary.show.customizer.message=<message>
+ mostrará sua mensagem personalizada quando alguém tentar abrir o personalizador.  -->
+            <name>pargres</name>
+            <properties/>
+            <folders>
+                <source-folder>
+                    <label>src</label>
+                    <type>java</type>
+                    <location>src</location>
+                </source-folder>
+                <source-folder>
+                    <label>test</label>
+                    <type>java</type>
+                    <location>test</location>
+                </source-folder>
+            </folders>
+            <ide-actions>
+                <action name="build">
+                    <target>all</target>
+                </action>
+                <action name="javadoc">
+                    <target>javadoc.create</target>
+                </action>
+                <action name="clean">
+                    <target>clean</target>
+                </action>
+                <action name="rebuild">
+                    <target>clean</target>
+                    <target>all</target>
+                </action>
+                <action name="run.single">
+                    <script>nbproject/ide-file-targets.xml</script>
+                    <target>run-selected-file-in-test</target>
+                    <context>
+                        <property>run.class</property>
+                        <folder>test</folder>
+                        <pattern>\.java$</pattern>
+                        <format>java-name</format>
+                        <arity>
+                            <one-file-only/>
+                        </arity>
+                    </context>
+                </action>
+                <action name="run.single">
+                    <script>nbproject/ide-file-targets.xml</script>
+                    <target>run-selected-file-in-src</target>
+                    <context>
+                        <property>runclass</property>
+                        <folder>src</folder>
+                        <pattern>\.java$</pattern>
+                        <format>java-name</format>
+                        <arity>
+                            <one-file-only/>
+                        </arity>
+                    </context>
+                </action>
+            </ide-actions>
+            <view>
+                <items>
+                    <source-folder style="packages">
+                        <label>src</label>
+                        <location>src</location>
+                    </source-folder>
+                    <source-folder style="packages">
+                        <label>test</label>
+                        <location>test</location>
+                    </source-folder>
+                    <source-file>
+                        <location>build.xml</location>
+                    </source-file>
+                </items>
+                <context-menu>
+                    <ide-action name="build"/>
+                    <ide-action name="rebuild"/>
+                    <ide-action name="clean"/>
+                    <ide-action name="javadoc"/>
+                </context-menu>
+            </view>
+            <subprojects/>
+        </general-data>
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/2">
+            <compilation-unit>
+                <package-root>src</package-root>
+                <classpath mode="compile">lib/CopyLibs:lib/IzPack.zip:lib/commons-cli-1.0.jar:lib/hash.jar:lib/hsqldb.jar:lib/jsch-0.1.20.jar:lib/log4j-1.2.9.jar:lib/postgresql-8.0-310.jdbc3.jar:lib/junit_4/junit-4.10-javadoc.jar:lib/junit_4/junit-4.10-sources.jar:lib/junit_4/junit-4.10.jar:src</classpath>
+                <source-level>1.5</source-level>
+            </compilation-unit>
+            <compilation-unit>
+                <package-root>test</package-root>
+                <unit-tests/>
+                <classpath mode="compile">lib/IzPack.zip:lib/commons-cli-1.0.jar:lib/hash.jar:lib/hsqldb.jar:lib/jsch-0.1.20.jar:lib/log4j-1.2.9.jar:lib/postgresql-8.0-310.jdbc3.jar:src:lib/junit_4/junit-4.10-javadoc.jar:lib/junit_4/junit-4.10-sources.jar:lib/junit_4/junit-4.10.jar</classpath>
+                <source-level>1.5</source-level>
+            </compilation-unit>
+        </java-data>
+    </configuration>
+</project>

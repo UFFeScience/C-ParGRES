@@ -1,0 +1,28 @@
+<SciCumulus>
+	<environment verbose="true" type="CLUSTER" host="uranus.nacad.ufrj.br"/>
+	<binary upload="false" directory="/home/users/silva/scc2-vldb/bin" conceptual_version="SCSetup.jar" execution_version="SCCore.jar" query_version="SCQP.jar"/>
+	<constraint workflow_exectag="map-1-1" nodes="2" cores="8" walltime="24" job_name="vldb" mail="vitor.silva.sousa@gmail.com"/>
+	<machine user="silva" password="livre2014!"/>
+	<workspace upload="true" workflow_dir="/home/users/silva/scc2-vldb/workflow_1" compressed_workspace="temp_workflow_1-cluster.zip" compressed_dir="temp_workflow_1" />
+	<database name="scc2-vldb" username="postgres" password="livre2009#" port="5432" server="146.164.31.200" server_port="52831" path="/var/lib/pgsql"/>
+	<!-- <query sql="select ea.taskid, ea.actid, ea.machineid, ea.status from eactivation as ea;"/> -->
+	<query sql="select * from cactivity;"/>
+	<conceptualWorkflow tag="workflow-1" description="">
+		<activity tag="act1" description="" type="MAP" activation="java -jar %=WFDIR%/bin/Sleep.jar ID=%=ID% T2=%=T2%">
+			<relation reltype="Input" name="IMod1Act1"/>
+			<relation reltype="Output" name="OMod1Act1" />
+			<field name="ID" type="float" input="IMod1Act1" output="OMod1Act1" decimalplaces="0"/>
+			<field name="T1" type="float" input="IMod1Act1" decimalplaces="0"/>
+			<field name="T2" type="float" input="IMod1Act1" output="OMod1Act1" decimalplaces="0"/>
+    	</activity>
+	    <activity tag="act2" description="" type="MAP" activation="java -jar %=WFDIR%/bin/Sleep.jar ID=%=ID% T2=%=T2%">
+			<relation reltype="Input" dependency="act1"/>
+			<relation reltype="Output" name="OMod1Act2" />
+			<field name="ID" type="float" output="OMod1Act2" decimalplaces="0"/>
+			<field name="T2" type="float" output="OMod1Act2" decimalplaces="0"/>
+    	</activity>
+	</conceptualWorkflow>
+	<executionWorkflow tag="workflow-1" execmodel="DYN_FAF" expdir="%=WFDIR%/exp" max_failure="5" user_interaction="false" redundancy="false" reliability="0.9">
+		<relation name="IMod1Act1" filename="Input.dataset"/>
+	</executionWorkflow>
+</SciCumulus>

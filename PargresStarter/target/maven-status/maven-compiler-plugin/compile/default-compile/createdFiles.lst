@@ -1,0 +1,11 @@
+enumeration/NodeType.class
+environment/AmazonMachine.class
+main/XMLReader.class
+environment/EnvironmentType.class
+adaptability/VirtualMachineType.class
+environment/AmazonProvider.class
+environment/AmazonMachine$Status.class
+main/SCUtils.class
+enumeration/OperationType.class
+main/PGStarter.class
+adaptability/MachineComparison.class

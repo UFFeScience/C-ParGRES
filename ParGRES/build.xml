@@ -1,0 +1,313 @@
+<project name="pargres" default="all" basedir="." >
+
+	<property file="build.properties"/>	
+
+	<property name="bin" value="bin"/>
+	<property name="bintest" value="bintest"/>
+	<property name="src" value="src"/>
+	<property name="test" value="test"/>
+	<property name="lib" value="lib"/>
+	<property name="build" value="build"/>
+	<property name="config" value="config"/>
+	<property name="install" value="install"/>			
+	<property name="language" value="language"/>	
+	<property name="webmetadata.dir" value="webmetadata"/>	
+	<property name="pages" value="pages"/>			
+	<property name="dist.name" value="pargres-0.1"/>
+	<property name="jdbcDriver" value="pargres-jdbc-client.jar"/>
+	<property name="pargresServerJarFile" value="pargres-server.jar"/>
+	<property name="pargresTestsJarFile" value="pargres-tests.jar"/>
+	<property name="pargresAdminJarFile" value="pargresadmin.jar"/>	
+	<property name="pargresAdminWarFile" value="pargresadmin.war"/>
+	<property name="clusterUrl" value="{sshusername}@${host}:~/${dist.name}"/>
+	
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+        
+	<path id="classpathtest">
+                <pathelement location="bin"/>
+		<fileset dir="${lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${lib}/junit_4">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+        
+	<target name="init">
+		<delete file="${build}"/>
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="compile">
+		<javac 
+                    includeantruntime="true"
+                    classpathref="classpath"
+                    srcdir="${src}"
+                    destdir="${bin}"
+                    debug="true" debuglevel="lines,vars,source"/>
+		<javac 
+                    includeantruntime="true"
+                    classpathref="classpath"
+                    srcdir="${config}"
+                    destdir="${bin}" debug="true" debuglevel="lines,vars,source"/>
+		<javac 
+                    includeantruntime="true"
+                    classpathref="classpathtest"
+                    srcdir="${test}"
+                    destdir="${bintest}" debug="true" debuglevel="lines,vars,source"/>
+	</target>
+
+	<target name="clean">
+            <delete includeemptydirs="true">
+                <fileset dir="${build}" includes="**/*"/>
+                <fileset dir="${bintest}" includes="**/*"/>
+                <fileset dir="${bin}" includes="**/*"/>
+            </delete>                
+	</target>
+
+	<target name="jar.client.create">
+		<jar destfile="${build}/${jdbcDriver}">
+			<fileset dir="${bin}" includes="org/pargres/commons/**/*.*"/>
+			<fileset dir="${bin}" includes="org/pargres/jdbc/**/*.*"/>
+			<fileset dir="${bin}" includes="org/pargres/console/**/*.*"/>			
+			<fileset dir="${bin}" includes="org/pargres/query/**/*.*"/>
+			<fileset dir="${bin}" includes="org/pargres/util/**/*.*"/>			
+			<fileset dir="${config}"/>
+                        <fileset dir="${src}" includes="**/*.java"/>
+		</jar>
+	</target>
+
+	<target name="jar.server.create">
+		<jar destfile="${build}/${pargresServerJarFile}" basedir="${bin}">
+                    <fileset dir="${src}" includes="**/*.java"/>
+		</jar>
+	</target>
+	
+	<target name="jar.tests.create">
+		<jar destfile="${build}/${pargresTestsJarFile}" basedir="${bintest}">
+                    <fileset dir="${src}" includes="**/*.java"/>
+		</jar>
+	</target>
+        
+	<target name="javadoc.create">
+		<delete dir="${build}/docs/ap"/>
+		<javadoc
+	           destdir="${build}/docs/api"
+	           author="true"
+	           version="true"
+	           use="true"
+	           windowtitle="Pargres API"
+		       classpath="classpath">
+
+			<packageset dir="${src}" defaultexcludes="yes">
+			</packageset>
+
+			<doctitle>
+				<![CDATA[<h1>Pargres</h1>]]></doctitle>
+		<bottom>
+			<![CDATA[<i>Copyright &#169; 2005 Pargres Development Team. All Rights Reserved.</i>]]></bottom>
+		<tag name="todo" scope="all" description="To do:"/>
+		<link href="http://pargres.nacad.ufrj.br/docs/api/"/>
+	</javadoc>
+	</target>
+	
+	<!--target name="all" depends="init,compile,jar.client.create,jar.server.create,installer.console.remotecopy"/-->
+	<target name="all" depends="init,compile,jar.client.create,jar.server.create,jar.tests.create,installer.console.create"/>
+	
+	<target name="parser.run">
+	<exec dir="${src}/org/pargres/parser" executable="${lib}/yacc.exe">
+		<arg line="-Jnorun -Jnodebug -Jthrows=org.pargres.commons.util.ParserSilentException -Jpackage=org.pargres.parser sql.y"/>
+	</exec>
+	<exec dir="${src}/org/pargres/parser" executable="${lib}/yacc.exe">
+		<arg line="-Jnorun -Jnodebug -Jpackage=org.pargres.parser -Jthrows=org.pargres.commons.util.ParserSilentException -Jclass=ParserIni parser_ini.y"/>
+	</exec>
+	<java classname="JFlex.Main" classpathref="classpath">
+		<arg value="${src}/org/pargres/parser/sql.flex"/>
+	</java >
+	<java classname="JFlex.Main" classpathref="classpath">
+		<arg value="${src}/org/pargres/parser/Parser_ini.flex"/>
+	</java >
+	</target>
+	
+	<!-- WEB ADMIN -->
+	
+	<target name="war.create" depends="jar.client.create">
+		<jar destfile="${build}/${pargresAdminJarFile}">
+			<fileset dir="bin">
+				<include name="org/pargres/webadmin/**/*"/>    			
+		    </fileset>
+		</jar>
+		
+		<war destfile="${build}/${pargresAdminWarFile}" webxml="${webmetadata.dir}/web.xml">
+			<fileset dir="${pages}"/>
+    		<lib dir="${lib}">
+			    <include name="log4j-1.2.9.jar"/>    			
+			</lib>
+			<lib dir="${build}">
+				<include name="${pargresAdminJarFile}"/>
+			    <include name="${jdbcDriver}"/>
+			</lib>
+		</war>
+	</target>
+	
+	<target name="war.remotecopy">
+		<sshexec host="${host}" username="${sshusername}" password="${sshpassword}" command="rm -r ${webapp.repo}/pargresadmin" trust="yes" failonerror="false"/>
+		<sshexec host="${host}" username="${sshusername}" password="${sshpassword}" command="rm ${webapp.repo}/${pargresAdminWarFile}" trust="yes" failonerror="false"/>		
+		<scp password="${sshpassword}" todir="${sshusername}@${host}:${webapp.repo}" trust="yes">
+			<fileset dir="${build}">
+				<include name="${pargresAdminWarFile}"/>
+			</fileset>
+		</scp>		
+	</target>
+	
+	<target name="war.deploy" depends="war.create,war.remotecopy"/>
+	
+	<target name="installer.gui.create" depends="installer.prepare">
+	    <!-- Build Java graphical installer bin distribution -->
+		<unzip src="${lib}/IzPack.zip" dest="${build}" overwrite="false"/>
+		
+	    <taskdef name="izpack" classpath="${build}/IzPack/lib/compiler.jar"
+		     classname="com.izforge.izpack.ant.IzPackTask"/>
+		     		
+	    <izpack input="${basedir}/install.xml"
+		    output="${build}/${dist.name}-GuiInstaller.jar"
+		    basedir="."
+		    izPackDir="${basedir}/${build}/IzPack">
+	    	<property name="preparedDir" value="${build}/${dist.name}"/>
+	    </izpack>
+	</target>
+	
+	<target name="installer.console.create" depends="installer.prepare">
+	    <delete file="${build}/${dist.name}-ConsoleInstaller.tar.gz"/>
+		<tar tarfile="${build}/${dist.name}.tar">
+			<tarfileset dir="${build}">
+				<include name="${dist.name}/**/*.*"/>
+			</tarfileset>	
+		</tar>
+		<gzip zipfile="${build}/${dist.name}.tar.gz" src="${build}/${dist.name}.tar"/>
+		<delete file="${build}/${dist.name}.tar"/>
+	</target>	
+	
+	<target name="installer.prepare" depends="jar.client.create,jar.server.create">
+		<delete dir="${build}/${dist.name}"/>
+		<copy todir="${build}/${dist.name}">
+            <fileset dir=".">            	         	
+            	<include name="*.*"/>
+            	<exclude name="build.properties*"/>
+               	<exclude name="install.xml"/>            	
+               	<exclude name="build.xml"/>            	            	
+               	<exclude name="*.log"/>            	            	
+               	<include name="${lib}/*.jar"/>
+               	<include name="${language}/*"/>            	            	
+               	<include name="${config}/*"/>            	            	            	
+            </fileset>     
+            <fileset dir="${install}">            	
+            	<include name="**/*"/>            	            	
+			</fileset>			
+		</copy>		
+		<copy todir="${build}/${dist.name}/lib">		
+			<fileset dir="${build}">
+				<include name="*.jar"/>
+				<exclude name="*installer*.jar"/>
+			</fileset>			
+		</copy>		
+		<move todir="${build}/${dist.name}">
+			<fileset dir="${build}">
+				<include name="docs/api/**/*"/>
+			</fileset>			
+		</move>
+	</target>	
+	
+	<!--target name="installer.console.remotecopy">
+		<scp password="${sshpassword}" todir="${sshusername}@${host}:~/" trust="on">
+			<fileset dir="${build}">
+				<include name="${dist.name}.tar.gz"/>
+			</fileset>
+		</scp>
+
+		<sshexec host="${host}" username="${sshusername}" password="${sshpassword}" command="gunzip ${dist.name}.tar.gz; tar -xvvf ${dist.name}.tar; rm ${dist.name}.tar; dos2unix ${dist.name}/bin/*.sh;chmod +x ${dist.name}/bin/*.sh" trust="yes"/>
+        </target-->
+	
+	<!--START: Needs to be costumized-->
+
+		
+	<!--END: Needs to be costumized-->
+	
+	<!--START: Proxy settings:
+	  # Comment the following lines, if you are not behind a proxy.
+	  # Fill in the appropriate values for:
+	  #		proxy.host
+	  #		proxy.port
+	  # if you are behind a proxy.
+	-->
+		
+	<!--property name="proxy.used" value="true"/>
+	<property name="proxy.host" value="abh-server.abh.uni-karlsruhe.de"/>
+	<property name="proxy.port" value="3128"/-->
+		
+	<!--END: Proxy settings-->
+	
+	<!--The fop librarys-->
+	<path id="fop.classpath">
+		<fileset dir="${lib}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<!--Create html output-->
+	<target name="html" description="Creates docbook_tutorial.html">
+		<echo>Creating docbook_tutorial.html</echo>
+		
+		<java jar="${lib}/saxon8.jar" fork="true"
+		  output="install/PargresUserGuide.html">
+			
+			<jvmarg value="-DproxySet=${proxy.used}"/>
+			<jvmarg value="-DproxyHost=${proxy.host}"/>
+			<jvmarg value="-DproxyPort=${proxy.port}"/>
+				
+			<arg value="install/PargresUserGuide.xml"/>
+			<arg value="${lib}/docbook/html/docbook.xsl"/>
+		</java>
+	</target>
+	
+	<!--Create pdf output-->
+	<target name="pdf" description="Creates docbook_tutorial.pdf">
+		<echo>Creating docbook_tutorial.pdf</echo>
+		<java classname="org.apache.fop.apps.Fop" fork="true">
+							
+			<!--jvmarg value="-DproxySet=${proxy.used}"/>
+			<jvmarg value="-DproxyHost=${proxy.host}"/>
+			<jvmarg value="-DproxyPort=${proxy.port}"/-->
+				
+			<classpath refid="fop.classpath"/>
+			<arg line="-xml ${input.file}"/>
+			<arg line="-xsl ${docbook.dir}/fo/docbook.xsl"/>
+			<arg value="${output.pdf}"/>
+		</java>
+	</target>
+	
+	<!--Create the changes documents-->
+	<target name="doc.make" 
+		    description="Creates all documents"
+	>
+		<echo>Creates all documents</echo>
+		<antcall target="html"></antcall>
+		<antcall target="pdf"></antcall>
+	</target>	
+
+</project>
+
+	<!--target name="dist1" depends="init">
+		<jar destfile="${build}/diske.jar" basedir="${bin}">
+					</jar>
+
+		<scp todir="${clusterUrl1}" trust="yes">
+			<fileset dir="${build}">
+				<include name="diske.jar"/>
+			</fileset>
+		</scp>
+	</target-->

@@ -1,0 +1,4 @@
+host=myhost.com
+sshusername=user
+sshpassword=password
+webapp.repo=/local/jakarta-tomcat/webapps
